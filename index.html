@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>my personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     
+</head>
+
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"> Port<span>folio</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar" >
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#Skill" >Skill</a>
+            <a href="#contact">contact</a>
+            
+           
+        </nav>
+      
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's me</h3>
+            <h1>Devid Maharwade</h1>
+            <h3>And I'm a <span id="element"></span>
+            </h3>
+            <p> As a frontend developer's expertise lies in creating the user interface and user experience of websites and web applications using HTML, CSS, and JavaScript.  </p>
+            
+            <div class="home-sci">
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+
+            </div>
+            <a href="#" class="btn-box">More about me</a>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="image">
+            <img src="/portfolio..jpg" alt="">
+        </div>
+        <div class="about-text">
+            <h2>About <span>me</span></h2>
+            <h4>Frontend Devloper!</h4>
+
+            <p>I am a skilled wed developer.I start my career in frontent devloper in 2023 and My two months
+                experience.web design is my passion.I am currenty doing BCA in second year.As a frontend developer, my primary focus is on creating user interfaces and experiences that captivate and delight users. I am passionate about combining my technical skills with creative problem-solving to craft visually appealing and highly functional web applications. Here's a glimpse into my role and responsibilities as a frontend developer:</p>
+            <a href="#" class="btn-box">More about me</a>
+        </div>
+    </section>
+    
+    <h1 class="sub-title">My <span>Skills</span></h1>
+
+    <section class="skill" id="skill">
+        <div class="skills">
+            <h2>HTML</h2>
+            <div class="progress-bar">
+                <div class="html">
+                    <span>96%</span>
+                </div>
+            </div>
+            <h2>CSS</h2>
+            <div class="progress-bar">
+                <div class="css">
+                    <span>80%</span>
+                </div>
+            </div>
+            <h2>Javascript</h2>
+            <div class="progress-bar">
+                <div class="javascript">
+                    <span>66%</span>
+                </div>
+            </div>
+            <h2>C++ programing</h2>
+            <div class="progress-bar">
+                <div class="cplus">
+                    <span>56%</span>
+                </div>
+            </div>
+            <h2>C programing</h2>
+            <div class="progress-bar">
+                <div class="c">
+                    <span>78%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>me</span></h2>
+            <h4>Let's work Together</h4>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae commodi ducimus placeat sapiente
+                velit, labore delectus sit facere eos eum. Tempora reiciendis magni fugit earum consectetur deserunt
+                cumque saepe? Veritatis in ea quidem ex.</p>
+            <div class="contact-list">
+                <li><i class='bx bx-send '></i>contact@gmail.com</li>
+                <li><i class='bx bx-phone '></i>8552099901</li>
+            </div>
+            <div class="contact-icon">
+                <a href=""><i class='bx bxl-facebook-square'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+        </div>
+    
+        <div class="contact-form">
+            <form action="https://formsubmit.co/efc5cb8c950b51bb067da3a199590585 " method="POST">
+                <input type="name" placeholder="Enter your name" required>
+                <input type="email" placeholder="Enter your Email" required>
+
+                <input type="" placeholder="Enter your subject">
+                <textarea name="message" id="" cols="40" rows="10" placeholder="Enter your messege" required></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="submit" value="submit" class="send">
+            </form>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web devloper', 'Web designer', 'Frontend devloper'],
+            typeSpeed: 50,
+        });
+    </script>
+
+
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "maharwadedevid0@gmail.com",
+                Username: "devidmaharwade5@gamil.com",
+                Password: "Devid@12345",
+                To: 'devidmaharwade6@gamil.com',
+                From: document.getElementById("email").value,
+                Subject: "New conact form enquiry",
+                Body: "Name:" + document.getElementById("Name").value
+                    + "<br> Email:" + document.getElementById("email").value
+                    + "<br> subject:" + document.getElementById("subject").value
+                    + "<br> messege:" + document.getElementById("messege").value
+            }).then(
+                message => alert("message send succesfully")
+            );
+        }
+    </script>
+
+    <script>
+        /*scroll section start*/
+
+           let header = document.querySelectorAll('header');
+           let navlinks = document.querySelectorAll('nav a');
+
+           window.onscroll = () =>{
+            sections.foreach(sec =>{
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                
+                if(top >=offset && top < offset + height){
+                 navlinks .forEach(links => {
+                    links.classList.remove('active');
+                    document.querySelector('header nav a  [href*=' + id + ']').classList.add('active');
+                      
+                 });
+                };
+            });
+           };
+
+
+</script>
+
+
+ <script>
+         /*scroll section end*/
+
+        /* hamburger menu section start*/
+        let menuIcon = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        
+       menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        };
+         /* hamburger menu section end*/
+        </script>  
+
+
+
+</body>
+
+</html>
